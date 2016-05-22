@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'atp_rankings'
+require "./lib/atp_rankings"
 
-CLI.new.call
+AtpRankings::CLI.new.call

@@ -1,0 +1,3 @@
+class AtpRankings::CLI
+  
+end

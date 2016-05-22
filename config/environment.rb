@@ -1,3 +1,2 @@
-require "pry"
-require "nokogiri"
-require "open-uri"
+require_relative "../lib/atp_rankings/version"
+require_relative "../lib/atp_rankings/cli"
