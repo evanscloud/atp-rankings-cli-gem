@@ -1,8 +1,7 @@
-# AtpRankings
+# Emirates Tennis ATP Rankings Singles Race to London Rubygem
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/atp_rankings`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem provides a current list of ranked singles tennis players who are competing to be part of the top 8. At the end of the season in November, these top 8 players for the current year qualify to enter the Barclays ATP World Tour Finals. This list allows a user to select a player and view a multitude of information regarding that athlete of the current year.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -20,9 +19,19 @@ Or install it yourself as:
 
     $ gem install atp_rankings
 
-## Usage
 
-TODO: Write usage instructions here
+## Dependencies
+
+```
+'nokogiri'
+'open-uri'
+```
+
+
+## Overview
+
+This gem will provide a list of the current top 20 players in contention to qualify for the Barclays ATP World Tour Finals. User can select a player based on there full name or a number to select a player based on that official ATP ranking number. Options to view player's bio, current activity for the year, and recent tournament played.
+
 
 ## Development
 
