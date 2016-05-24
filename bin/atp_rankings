@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
-require "./lib/atp_rankings"
+require "bundler/setup"
+require "atp_rankings"
 
 AtpRankings::CLI.new.call

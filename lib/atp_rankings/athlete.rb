@@ -1,0 +1,2 @@
+class AtpRankings::Athlete
+end
