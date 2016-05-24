@@ -2,7 +2,7 @@ class AtpRankings::CLI
   def call
     AtpRankings::Scraper.new.create_athletes
     puts "Welcome to Emirates ATP World Tour Race to London Rankings!"
-    puts "Below are the current 20 ranked players in contention for a top 8 spot."
+    puts "Below are the current top 25 players in contention for a top 8 spot."
     puts ""
     list_athletes
     start
@@ -13,7 +13,7 @@ class AtpRankings::CLI
     puts "Please select a player based on ranking number:"
     input = gets.strip.to_i
 
-    if input != 0 && input.between?(1, 20)
+    if input != 0 && input.between?(1, 25)
       athlete = AtpRankings::Athlete.find(input)
       print_athlete(athlete)
     else
@@ -36,7 +36,7 @@ class AtpRankings::CLI
   end
 
   def list_athletes
-    format = '%-7s %-25s %-8s %-10s %-10s'
+    format = '%-12s %-25s %-8s %-10s %-10s'
     puts format % ['RACE RANK', 'NAME', 'AGE', 'POINTS', 'TOURNAMENTS PLAYED']
     AtpRankings::Athlete.all.each_with_index do |athlete, i|
       puts format % [ athlete.rank, athlete.name, athlete.age, athlete.points, athlete.tourn_played ]

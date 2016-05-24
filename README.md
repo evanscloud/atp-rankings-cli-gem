@@ -30,7 +30,7 @@ Or install it yourself as:
 
 ## Overview
 
-This gem will provide a list of the current top 20 tennis players in contention to qualify for the Barclays ATP World Tour Finals. User can select an athlete based on there Emirates ATP Race to London ranking to view there bio.
+This gem will provide a list of the current top 25 ranked tennis players in contention to qualify for the Barclays ATP World Tour Finals. User can select an athlete based on there Emirates ATP Race to London ranking to view there bio.
 
 
 ## Development

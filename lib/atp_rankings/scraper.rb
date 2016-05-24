@@ -1,8 +1,6 @@
 class AtpRankings::Scraper
   def get_page
     Nokogiri::HTML(open("http://www.atpworldtour.com/en/rankings/singles-race-to-london"))
-    html = Nokogiri::HTML(open("http://www.atpworldtour.com/en/players/novak-djokovic/d643/overview"))
-    binding.pry
   end
 
   def scrape_athletes_index
@@ -11,7 +9,7 @@ class AtpRankings::Scraper
 
   def create_athletes
     i = 1
-    while i < 21 do
+    while i < 26 do
       scrape_athletes_index.each do |a|
         athlete = AtpRankings::Athlete.new
         athlete.rank = a.search("tr[#{i}] .rank-cell").text.strip
