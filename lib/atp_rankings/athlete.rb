@@ -23,9 +23,10 @@ class AtpRankings::Athlete
 
 
   def self.find_by_name(name)
+    name = name.split.map(&:capitalize).join(' ')
     self.all.detect do |athlete|
-      athlete.name.downcase.strip == name.downcase.strip ||
-      athlete.name.split(" ").first.strip.downcase == name.downcase.strip
+      athlete.name.strip == name.strip ||
+      athlete.name.split(" ").first.strip == name.strip
     end
   end
 

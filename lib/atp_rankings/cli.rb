@@ -10,12 +10,22 @@ class AtpRankings::CLI
 
   def start
     puts ""
-    puts "Please select a player based on ranking number:"
-    input = gets.strip.to_i
+    puts "Please select a player based on ranking number or full name:"
+    input = gets.strip
+    i = input.to_i
 
-    if input != 0 && input.between?(1, 25)
-      athlete = AtpRankings::Athlete.find(input)
-      print_athlete(athlete)
+    if i != 0 && i.between?(1, 25)
+      rank = AtpRankings::Athlete.find(i)
+      print_athlete(rank)
+    elsif i == 0
+      athlete = AtpRankings::Athlete.find_by_name(input)
+      if athlete != nil
+        print_athlete(athlete)
+      else
+        puts ""
+        puts "Sorry, I think you may have misspelled that... Let's try again."
+        start
+      end
     else
       puts "Hey, something went wrong... Let's try again."
       start
