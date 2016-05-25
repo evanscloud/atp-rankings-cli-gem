@@ -1,6 +1,7 @@
 class AtpRankings::CLI
   def call
     AtpRankings::Scraper.new.create_athletes
+    puts ""
     puts "Welcome to Emirates ATP World Tour Race to London Rankings!"
     puts "Below are the current top 25 players in contention for a top 8 spot."
     puts ""
@@ -27,6 +28,7 @@ class AtpRankings::CLI
         start
       end
     else
+      puts ""
       puts "Hey, something went wrong... Let's try again."
       start
     end
