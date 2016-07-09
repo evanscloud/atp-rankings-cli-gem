@@ -46,4 +46,8 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/evansc
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT). 
+
+## Notes
+
+This is an student project used for the educational purpose of learning and understanding data. All information, trademarks, and copyrights belong to the ownership of ATP and it's affiliates. I do not own nor claim to own any of ATP's data.
